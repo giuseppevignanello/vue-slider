@@ -63,10 +63,19 @@ const { createApp } = Vue
             this.activeImg = index
         },
 
+        autoplay() {
+            setInterval(this.next, 1000)
+        },
+
+        stop() {
+            clearInterval(autoplay)
+        },
+
+        
        
     }, 
     mounted() {
-        setInterval(this.next, 3000)
+        this.autoplay()
         
     }
   }).mount('#app')
