@@ -39,8 +39,24 @@ const { createApp } = Vue
             }
         ],
       }
+    },
+    methods: {
+        prev() {
+            this.activeImg--
+            if (this.activeImg === -1) {
+                this.activeImg = this.games.length - 1
+            }
+        },
+
+        next() {
+            this.activeImg++
+            if (this.activeImg === this.games.length) {
+                this.activeImg = 0
+            }
+        }
     }
   }).mount('#app')
+
 
 
 
