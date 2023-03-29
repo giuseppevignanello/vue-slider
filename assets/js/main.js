@@ -61,7 +61,13 @@ const { createApp } = Vue
 
         clickOnThumb(index) {
             this.activeImg = index
-        }
+        },
+
+       
+    }, 
+    mounted() {
+        setInterval(this.next, 3000)
+        
     }
   }).mount('#app')
 
