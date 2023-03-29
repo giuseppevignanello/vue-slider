@@ -32,12 +32,12 @@
                     </div>
                     <!-- /slide -->
                     <div class="thumbnail d-flex flex-column w-25">
-
-                        <img src="./assets/img/01.webp" alt="">
+                        <img @click ="clickOnThumb(index)" :class="index === activeImg ? 'activeThumbnail' : ''" v-for = "(game, index) in games" :src="game.image" alt="">
+                        <!-- <img src="./assets/img/01.webp" alt="">
                         <img src="./assets/img/02.webp" alt="">
                         <img src="./assets/img/03.webp" alt="">
                         <img src="./assets/img/04.webp" alt="">
-                        <img src="./assets/img/05.webp" alt="">
+                        <img src="./assets/img/05.webp" alt=""> -->
 
                     </div>
                     <!-- /thumbnail -->

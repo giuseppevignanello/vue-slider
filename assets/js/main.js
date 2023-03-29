@@ -41,6 +41,8 @@ const { createApp } = Vue
       }
     },
     methods: {
+
+        // prev and next btn 
         prev() {
             this.activeImg--
             if (this.activeImg === -1) {
@@ -53,6 +55,12 @@ const { createApp } = Vue
             if (this.activeImg === this.games.length) {
                 this.activeImg = 0
             }
+        },
+
+        //click on thumb 
+
+        clickOnThumb(index) {
+            this.activeImg = index
         }
     }
   }).mount('#app')

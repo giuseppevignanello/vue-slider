@@ -8,6 +8,10 @@
     object-fit: cover;
 }
 
+.thumbnail img:not(.activeThumbnail){
+    filter: opacity(0.5);
+}
+
 .slide:not(.active) {
     display: none;
 }
