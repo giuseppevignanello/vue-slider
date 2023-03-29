@@ -54,3 +54,9 @@
     bottom: 20px; 
     left: 10px; 
 }
+
+.sidebar {
+    height: 550px; 
+    width: 150px; 
+    background-color: #0a0916
+}
