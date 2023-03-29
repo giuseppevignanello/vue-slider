@@ -8,6 +8,12 @@
     object-fit: cover;
 }
 
+.slide:not(.active) {
+    display: none;
+}
+
+/* /slider */
+
 .prev {
     top: 50%;
     left: -40px;
@@ -21,6 +27,9 @@
     left: 50%
 }
 
-.slide:not(.active) {
-    display: none;
+/* /button */
+
+.game_info {
+    bottom: 20px; 
+    left: 10px; 
 }

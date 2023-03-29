@@ -5,12 +5,16 @@
 // 2- applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
 // 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 
+
+//VUE instance
 const { createApp } = Vue
 
   createApp({
     data() {
       return {
         activeImg: 0,
+
+        // games array
         games :[
             {
                 image: './assets/img/01.webp',
@@ -34,7 +38,6 @@ const { createApp } = Vue
                 text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
             }
         ],
-        active: "active" 
       }
     }
   }).mount('#app')
