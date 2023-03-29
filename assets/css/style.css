@@ -1,0 +1,8 @@
+.slides {
+    height: 500px;
+}
+
+.thumbnail img {
+    height: 100px;
+    object-fit: cover;
+}
