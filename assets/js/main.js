@@ -63,7 +63,7 @@ const { createApp } = Vue
             this.activeImg = index
         },
 
-        autoplay() {this.idInterval = setInterval(this.next, 1000) },
+        autoplay() {this.idInterval = setInterval(this.next, 3000) },
 
         stop() {
             clearInterval(this.idInterval)
