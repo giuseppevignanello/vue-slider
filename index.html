@@ -16,19 +16,28 @@
 
 <div id="app">
     <div>
-        <div class="container">
-            <div class="slider d-flex w-75">
-                <div class="slides">
-                    <img class="h-100 w-100" src="./assets/img/01.webp" alt="">
+        <div class="container d-flex justify-content-center">
+            <div class="slider d-flex position-relative  ">
+                <div class="slides w-75">
+                    <img class="w-100 h-100" src="./assets/img/03.webp" alt="">
                 </div>
-                <div class="thumbnail d-flex flex-column w-30">
+                <div class="thumbnail d-flex flex-column w-25">
                     <img src="./assets/img/01.webp" alt="">
-                    <img src="./assets/img/01.webp" alt="">
-                    <img src="./assets/img/01.webp" alt="">
-                    <img src="./assets/img/01.webp" alt="">
-                    <img src="./assets/img/01.webp" alt="">
+                    <img src="./assets/img/02.webp" alt="">
+                    <img src="./assets/img/03.webp" alt="">
+                    <img src="./assets/img/04.webp" alt="">
+                    <img src="./assets/img/05.webp" alt="">
 
                 </div>
+                <div class="change_buttons">
+                    <button class="prev position-absolute"> <i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+                    <button class="next position-absolute"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="autoplay_buttons position-absolute d-flex">
+                <button class="play"> <i class="fa fa-play-circle" aria-hidden="true"></i></button>
+                <button class="stop"> <i class="fa fa-stop-circle" aria-hidden="true"></i></button>
+                <button class="backward"><i class="fa fa-backward" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>

@@ -1,8 +1,22 @@
-.slides {
+.slides img {
     height: 500px;
+    object-fit: cover;
 }
 
 .thumbnail img {
     height: 100px;
     object-fit: cover;
+}
+
+.prev {
+    top: 50%;
+    left: -40px;
+}
+.next {
+    top: 50%; 
+    right: -40px
+}
+.autoplay_buttons {
+    top: 90%; 
+    left: 50%
 }
