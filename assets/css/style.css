@@ -20,3 +20,7 @@
     top: 90%; 
     left: 50%
 }
+
+.slide:not(.active) {
+    display: none;
+}
