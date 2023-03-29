@@ -17,47 +17,55 @@
 <body>
 
     <div id="app">
-        <div>
-            <div class="container d-flex justify-content-center">
-                <div @mouseenter="stop" @mouseleave ="autoplay" class="slider d-flex position-relative  ">
-                    <div class="slides w-75">
-                        <div class="slide  position-relative" v-for="(game,index) in games"
-                            :class="index === activeImg ? 'active' : ''">
-                            <div class="game_info position-absolute text-white">
-                                <h4> {{game.title}} </h4>
-                                <span> {{game.text}}</span>
-                            </div>
-                            <img :src="game.image" class="w-100" alt="">
+        <header id="app_header" class="py-2 text-center">
+            <h1 class="text-white">New Games</h1>
+        </header>
+        <!-- /#app_header -->
+        <div class="container d-flex justify-content-center mt-3 mt-md-5">
+            <div @mouseenter="stop" @mouseleave="autoplay" class="slider d-flex position-relative  ">
+                <div class="slides w-75 shadow">
+                    <div class="slide  position-relative" v-for="(game,index) in games"
+                        :class="index === activeImg ? 'active' : ''">
+                        <div class="game_info position-absolute text-white">
+                            <h4> {{game.title}} </h4>
+                            <span class="fw-bold"> {{game.text}}</span>
                         </div>
+                        <img :src="game.image" class="w-100" alt="">
                     </div>
-                    <!-- /slide -->
-                    <div class="thumbnail d-flex flex-column w-25">
-                        <img @click ="clickOnThumb(index)" :class="index === activeImg ? 'activeThumbnail' : ''" v-for = "(game, index) in games" :src="game.image" alt="">
-                        <!-- <img src="./assets/img/01.webp" alt="">
+                </div>
+                <!-- /slide -->
+                <div class="thumbnail d-flex flex-column w-25">
+                    <img @click="clickOnThumb(index)" :class="index === activeImg ? 'activeThumbnail' : ''"
+                        v-for="(game, index) in games" :src="game.image" alt="">
+                    <!-- <img src="./assets/img/01.webp" alt="">
                         <img src="./assets/img/02.webp" alt="">
                         <img src="./assets/img/03.webp" alt="">
                         <img src="./assets/img/04.webp" alt="">
                         <img src="./assets/img/05.webp" alt=""> -->
 
-                    </div>
-                    <!-- /thumbnail -->
-                    <div class="change_buttons">
-                        <button class=" prev position-absolute" @click = "prev"> <i class="fa fa-arrow-circle-left"
-                            aria-hidden="true"></i></button>
-                        <button class="next position-absolute" @click = "next"><i class="fa fa-arrow-circle-right"
-                                aria-hidden="true"></i></button>
-                    </div>
                 </div>
-                <!-- <div class="autoplay_buttons position-absolute d-flex">
+                <!-- /thumbnail -->
+                <div class="change_buttons">
+                    <button class="btn prev position-absolute text-white border-0" @click="prev"> <i class="fa fa-arrow-circle-left fa-xl"
+                            aria-hidden="true"></i></button>
+                    <button class="btn next position-absolute text-white border-0" @click="next"><i class="fa fa-arrow-circle-right fa-xl"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <!-- <div class="autoplay_buttons position-absolute d-flex">
                     <button @click = "play" class="play"> <i class="fa fa-play-circle" aria-hidden="true"></i></button>
                     <button class="stop"> <i class="fa fa-stop-circle" aria-hidden="true"></i></button>
                     <button class="backward"><i class="fa fa-backward" aria-hidden="true"></i></button>
                 </div> -->
-                <!-- /buttons -->
-            </div>
+            <!-- /buttons -->
         </div>
 
+
     </div>
+    <footer id="footer" class="text-center mt-5">
+        Made by Giuseppe Vignanello
+    </footer>
+    <!-- /#footer -->
 
 
 

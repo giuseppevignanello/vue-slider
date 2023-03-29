@@ -1,7 +1,16 @@
+#app_header {
+    background-color: #0d253c;
+}
+
+.slider {
+    width: 100%
+}
+
 .slides img {
     height: 500px;
     object-fit: cover;
 }
+
 
 .thumbnail img {
     height: 100px;
@@ -12,19 +21,27 @@
     filter: opacity(0.5);
 }
 
+
+
+.slide:hover, 
+.thumbnail img:hover{
+    scale:1.1; 
+    z-index:10
+}
+
 .slide:not(.active) {
     display: none;
 }
 
 /* /slider */
-
 .prev {
     top: 50%;
-    left: -40px;
+    left: 0px;
 }
 .next {
     top: 50%; 
-    right: -40px
+    right: 0px; 
+    z-index: 10000;
 }
 .autoplay_buttons {
     top: 90%; 
