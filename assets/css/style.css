@@ -56,7 +56,19 @@
 }
 
 .sidebar {
-    height: 550px; 
     width: 150px; 
     background-color: #0a0916
+}
+ 
+
+
+@media screen and (min-width: 768px) {
+    .slides img {
+        height: 750px
+    }
+
+    .thumbnail img {
+        height: 150px;
+    }
+    
 }
