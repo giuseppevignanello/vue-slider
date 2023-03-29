@@ -13,7 +13,7 @@ const { createApp } = Vue
     data() {
       return {
         activeImg: 0,
-
+        idInterval: null, 
         // games array
         games :[
             {
@@ -63,17 +63,14 @@ const { createApp } = Vue
             this.activeImg = index
         },
 
-        autoplay() {
-            setInterval(this.next, 1000)
-        },
+        autoplay() {this.idInterval = setInterval(this.next, 1000) },
 
         stop() {
-            clearInterval(autoplay)
+            clearInterval(this.idInterval)
         },
 
-        
        
-    }, 
+    },
     mounted() {
         this.autoplay()
         
