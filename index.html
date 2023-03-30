@@ -27,13 +27,12 @@
 
                 <div @mouseenter="stop" @mouseleave="autoplay" class="slider d-flex position-relative  ">
                     <div class="slides w-75 shadow">
-                        <div class="slide  position-relative" v-for="(game,index) in games"
-                            :class="index === activeImg ? 'active' : ''">
+                        <div class="slide position-relative" >
                             <div class="game_info position-absolute text-white">
-                                <h4> {{game.title}} </h4>
-                                <span class="fw-bold"> {{game.text}}</span>
+                                <h4> {{games[activeImg].title}} </h4>
+                                <span class="fw-bold"> {{games[activeImg].text}}</span>
                             </div>
-                            <img :src="game.image" class="w-100" alt="">
+                            <img :src="games[activeImg].image" class="w-100" alt="">
                         </div>
                     </div>
                     <!-- /slide -->
